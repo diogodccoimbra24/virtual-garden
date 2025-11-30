@@ -9,7 +9,7 @@ public class GardenApp {
     //Constructor
     public GardenApp() {
         //Initialization of the attributes
-        this.authManager = new AuthenticationManger;
+        this.authManager = new AuthenticationManger();
         //the app starts not running
         this.isRunning = false;
 

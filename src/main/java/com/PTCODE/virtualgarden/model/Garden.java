@@ -19,7 +19,7 @@ public class Garden {
     public Garden(String name, Region region) {
         this.name = name;
         this.region = region;
-        this.weather = new Weather();
+        this.weather = new Weather(region);
         this.calendar = Calendar.getInstance();
         this.plants = new ArrayList<Plant>();
         this.notifications = new ArrayList<Notification>();

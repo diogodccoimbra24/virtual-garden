@@ -1,5 +1,7 @@
 package com.PTCODE.virtualgarden.auth;
 
+import com.PTCODE.virtualgarden.model.Garden;
+
 import java.util.ArrayList;
 import java.util.List;
 

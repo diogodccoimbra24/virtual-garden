@@ -23,11 +23,11 @@ public class Product {
         }
         else {
             plant.applyProduct(this);
-            System.out.println("The " + name + " (product) was applied to " + plant.getName());
+            System.out.println("The " + name + " was applied to the " + plant.getName());
         }
     }
 
-    //Method to get the name of the plant (getter)
+    //Method to get the name of the product (getter)
     public String getName() {
         return this.name;
     }

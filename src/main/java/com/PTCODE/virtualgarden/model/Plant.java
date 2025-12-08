@@ -23,11 +23,50 @@ public class Plant {
     //Method to apply a product on a plant
     public void applyProduct(Product product) {
 
+        if(product == null){
+            System.out.println("No product to apply");
+            return;
+        }
+
+        products.add(product);
+
+        if ("thirsty".equals(status) && "water".equals(product.getName())){
+
+            status = "healthy";
+            System.out.println("Your " + name + " just became " + status + " again");
+
+        } else if ("thirsty".equals(status) && "fertilizer".equals(product.getName())) {
+
+            status = "thirsty";
+            System.out.println("Your " + name + " doesn't need fertilizer right now");
+        }
+
+        if ("dying".equals(status) && "fertilizer".equals(product.getName())){
+
+            status = "thirsty";
+            System.out.println("Your " + name + " is currently: " + status);
+
+        } else if ("dying".equals(status) && "water".equals(product.getName())) {
+
+            status = "dying";
+            System.out.println("Your " + name + " needs something else before.");
+        }
     }
 
     //Method to get the info of what the plant needs (getter)
     public String getCareInfo() {
 
+        if(status.equals("healthy")){
+            return "No need to apply any product to this plant";
+
+        }if (status.equals("thirsty")) {
+            return "Your " + name + " is thirsty. Apply some water";
+
+        }if (status.equals("dying")) {
+            return "Your " + name + " needs to be taken care. Apply some fertilizer";
+        }
+
+        return "plant status unknown";
     }
 
     //Method to get the name of the plant (getter)

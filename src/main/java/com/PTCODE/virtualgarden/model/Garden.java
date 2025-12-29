@@ -47,7 +47,10 @@ public class Garden {
         //if it's not then will create a notification displaying the name and type of the plant DC
         for(Plant plant : plants ){
             if(!plant.getStatus().equals("healthy")){
-                Notification notification = new Notification(plant.getName(), plant.getType());
+                //Displayed message when a notification pops up DC
+                String message = "Plant " + plant.getName() + "( " + plant.getType() + " )" + " is currently " + plant.getStatus();
+
+                Notification notification = new Notification(message, plant.getType());
                 notifications.add(notification);
             }
         }
@@ -67,6 +70,11 @@ public class Garden {
     //Method to get the name from the plant (getter) DC
     public String getName() {
         return this.name;
+    }
+
+    //Method to get the notifications from the list (getter) DC
+    public List<Notification> getNotifications() {
+        return this.notifications;
     }
 
 }

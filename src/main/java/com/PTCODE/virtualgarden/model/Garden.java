@@ -62,12 +62,12 @@ public class Garden {
         return this.weather;
     }
 
-    //Method to get the plants from the garden (getter) DC
+    //Method to display the plants from the garden (getter) DC
     public List<Plant> getPlants() {
         return this.plants;
     }
 
-    //Method to get the name from the plant (getter) DC
+    //Method to get the name from the garden (getter) DC
     public String getName() {
         return this.name;
     }

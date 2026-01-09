@@ -26,12 +26,7 @@ public class User {
 
     //Method to remove a garden DC
     public void removeGarden(Garden garden) {
-        //If statement that makes impossible to have 0 gardens in the list. the minimum is always 1 DC
-        if (gardens.size() == 1){
-            return;
-        } else {
-            gardens.remove(garden);
-        }
+        gardens.remove(garden);
     }
 
     //Method to get a garden from the list (getter) DC

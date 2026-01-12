@@ -6,58 +6,48 @@ import java.util.List;
 public class Plant {
 
     //Attributes DC
-    private String name;
-    private String type;
+    private PlantType plantType;
     private String status;
-    private List<Product> products;
 
     //Constructor DC
-    public Plant(String name, String type) {
-        this.name = name;
-        this.type = type;
+    public Plant(PlantType plantType) {
+        this.plantType = plantType;
         //Default value for status DC
         this.status = "healthy";
-        this.products = new ArrayList<Product>();
     }
 
     //Method to apply a product on a plant DC
-    public void applyProduct(Product product) {
+    public void applyProduct(ProductType product) {
 
+        //If no product was selected, nothing happens DC
         if(product == null){
-            System.out.println("No product to apply");
             return;
         }
 
-        products.add(product);
-
         //If the status of the plant is thirsty and we add water the status goes up to healthy DC
         //If the status is thirsty and we try to add fertilizer it will stay the same because the plant needs water and not fertilizer DC
-        if ("thirsty".equals(status) && "water".equals(product.getName())){
+        if ("thirsty".equals(status) && product == ProductType.WATER){
 
             //Update of the status
             status = "healthy";
-            System.out.println("Your " + name + " just became " + status + " again");
 
-        } else if ("thirsty".equals(status) && "fertilizer".equals(product.getName())) {
+        } else if ("thirsty".equals(status) && product == ProductType.FERTILIZER) {
 
             //The status will be the same DC
             status = "thirsty";
-            System.out.println("Your " + name + " doesn't need fertilizer right now");
         }
 
         //If the status of the plant is dying and we add fertilizer it will go up to thirsty, and if we want the status  to improve to healthy we need to satisfy the requirement by adding water DC
         //If the status was dying and we try to add water, the status will be the same since the plant needs fertilizer and not water DC
-        if ("dying".equals(status) && "fertilizer".equals(product.getName())){
+        if ("dying".equals(status) && product == ProductType.FERTILIZER){
 
             //The status improve DC
             status = "thirsty";
-            System.out.println("Your " + name + " is currently: " + status);
 
-        } else if ("dying".equals(status) && "water".equals(product.getName())) {
+        } else if ("dying".equals(status) && product == ProductType.WATER) {
 
             //The status stays the same DC
             status = "dying";
-            System.out.println("Your " + name + " needs something else before.");
         }
     }
 
@@ -65,26 +55,30 @@ public class Plant {
     public String getCareInfo() {
 
         if(status.equals("healthy")){
-            return "No need to apply any product to this plant";
+            return "No need to apply any product to this " + plantType.getCategory();
 
         }if (status.equals("thirsty")) {
-            return "Your " + name + " is thirsty. Apply some water";
+            return "Your " + getName() + " is thirsty. Apply some " + ProductType.WATER.getName();
 
         }if (status.equals("dying")) {
-            return "Your " + name + " needs to be taken care. Apply some fertilizer";
+            return "Your " + getName() + " needs to be taken care. Apply some " + ProductType.FERTILIZER.getName();
         }
-
         return "plant status unknown";
     }
 
     //Method to get the name of the plant (getter) DC
     public String getName() {
-        return this.name;
+        return plantType.getName();
     }
 
     //Method to get the type of the plant (getter) DC
     public String getType() {
-        return this.type;
+        return plantType.getCategory();
+    }
+
+    //to get the whole plant (getter) DC
+    public PlantType getPlantType(){
+        return plantType;
     }
 
     //Method to get the current status of the plant (getter) DC

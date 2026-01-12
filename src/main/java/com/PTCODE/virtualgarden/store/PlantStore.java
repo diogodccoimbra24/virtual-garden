@@ -2,32 +2,25 @@ package com.PTCODE.virtualgarden.store;
 
 import com.PTCODE.virtualgarden.model.Garden;
 import com.PTCODE.virtualgarden.model.Plant;
-
-import java.util.ArrayList;
+import com.PTCODE.virtualgarden.model.PlantType;
+import java.util.Arrays;
 import java.util.List;
 
 public class PlantStore {
 
-    //Attributes
-    private List<Plant> availablePlants;
-
-    //Constructor
-    public PlantStore() {
-        this.availablePlants = new ArrayList<Plant>();
+    //Method to display the plants in the store DC
+    public List<PlantType> displayPlants() {
+        return Arrays.asList(PlantType.values());
     }
 
-    //Method to display the plants in the store
-    public void displayPlants() {
+    //Method to add a new plant to the garden DC
+    public boolean addPlantToGarden(Garden garden, PlantType type) {
 
-    }
-
-    //Method to get the info of the plant selected (getter)
-    public Plant getPlantInfo(String name) {
-        //search for the plant by name
-    }
-
-    //Method to add a new plant to the garden
-    public void addPlantToGarden(Garden garden, Plant plant) {
-
+        if (garden == null || type == null){
+            return false;
+        }
+        Plant newPlant = new Plant(type);
+        garden.addPlant(newPlant);
+        return true;
     }
 }

@@ -80,4 +80,9 @@ public class Garden {
         return this.notifications;
     }
 
+    //Method to get the region (getter) DC
+    public Region getRegion(){
+        return this.region;
+    }
+
 }

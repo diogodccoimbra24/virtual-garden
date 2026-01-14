@@ -4,6 +4,7 @@ import com.PTCODE.virtualgarden.auth.AuthenticationManager;
 import com.PTCODE.virtualgarden.auth.User;
 import com.PTCODE.virtualgarden.model.Garden;
 import com.PTCODE.virtualgarden.model.Region;
+import com.PTCODE.virtualgarden.service.WeatherService;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -15,12 +16,21 @@ public class GardenApp {
     //Attributes DC
     private AuthenticationManager authManager;
     private Garden currentGarden;
+    private WeatherService weatherService = new WeatherService();
 
     //Constructor DC
     public GardenApp() {
         //Initialization of the attributes
         this.authManager = new AuthenticationManager();
         this.currentGarden = null;
+    }
+
+    //Method to update the weather in the garden DC
+    public boolean updateCurrentGardenWeather() {
+        return weatherService.updateWeatherForRegion(
+                currentGarden.getWeatherInfo(),
+                currentGarden.getRegion()
+        );
     }
 
     //Method to create gardens DC

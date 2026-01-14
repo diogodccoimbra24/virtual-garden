@@ -36,7 +36,7 @@ public class WeatherService {
 
 
             //Fetch the weather from the coordinates DC
-            JSONObject current = getCurrentWeather(region.getLatitude(), region.getLongitude());
+            JSONObject current = getCurrentWeather(lat, lon);
 
             //If the API fails to retrieve the weather from the coordinates it stops DC
             if (current == null) {
@@ -52,6 +52,7 @@ public class WeatherService {
             weather.setHumidity(hum);
 
             return true;
+
         } catch (Exception e) {
             return false;
         }
@@ -63,7 +64,8 @@ public class WeatherService {
         //The link can't have any spaces DC
         city = city.replace(" ", "+");
 
-        String urlString = "https://geocoding-api.open-meteo.com/v1/search?name=" + city;
+        String urlString = "https://geocoding-api.open-meteo.com/v1/search?name=" +
+                city + "&count=1&language=en&format=json";
 
         HttpURLConnection conn = fetchApiResponse(urlString);
         //To check if the response code is 200 DC

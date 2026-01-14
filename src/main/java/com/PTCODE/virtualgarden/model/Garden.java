@@ -45,6 +45,9 @@ public class Garden {
     public void checkPlantStatus() {
         //in the list of plants it will check if the status of each one is healthy DC
         //if it's not then will create a notification displaying the name and type of the plant DC
+
+        //That way it won't spam notifications
+        notifications.clear();
         for(Plant plant : plants ){
             if(!plant.getStatus().equals("healthy")){
                 //Displayed message when a notification pops up DC

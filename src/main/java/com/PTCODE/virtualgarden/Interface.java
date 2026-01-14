@@ -15,12 +15,10 @@ public class Interface extends Application {
     }
 
     @Override
-    public void start(Stage stage) throws Exception{
+    public void start(Stage stage) throws Exception {
         SceneManager.setStage(stage);
         SceneManager.switchScene("/fxml/login.fxml");
-
-        MainView mainView = new MainView(stage);
-        mainView.show();
-
+        stage.show();
     }
+
 }

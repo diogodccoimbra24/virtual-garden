@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.CreateAccountController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.RegisterController">
    <children>
       <ImageView fitHeight="67.0" fitWidth="520.0" pickOnBounds="true">
          <image>
@@ -24,15 +24,15 @@
                   <Image url="@../image/LogoGarden.png" />
                </image>
             </ImageView>
-            <TextField layoutX="-20.0" layoutY="14.0" prefHeight="25.0" prefWidth="329.0" promptText="Username">
+            <TextField fx:id="usernameField" layoutX="-20.0" layoutY="14.0" prefHeight="25.0" prefWidth="329.0" promptText="Username">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor></TextField>
-            <PasswordField layoutX="-22.0" layoutY="66.0" prefHeight="25.0" prefWidth="329.0" promptText="Password">
+            <PasswordField fx:id="passwordField" layoutX="-22.0" layoutY="66.0" prefHeight="25.0" prefWidth="329.0" promptText="Password">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor></PasswordField>
-            <PasswordField layoutX="-22.0" layoutY="120.0" prefHeight="25.0" prefWidth="329.0" promptText="Password">
+            <PasswordField fx:id="confirmPasswordField" layoutX="-22.0" layoutY="120.0" prefHeight="25.0" prefWidth="329.0" promptText="Password">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor></PasswordField>
@@ -40,7 +40,7 @@
                <font>
                   <Font size="13.0" />
                </font></Label>
-            <Button layoutX="82.0" layoutY="167.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #3C6E55;" text="Create Account " textFill="WHITE">
+            <Button layoutX="82.0" layoutY="167.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #3C6E55;" text="Create Account " textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -59,7 +59,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Button layoutX="184.0" layoutY="222.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #3C6E55;" text="Login" textFill="WHITE">
+            <Button layoutX="184.0" layoutY="222.0" mnemonicParsing="false" onAction="#backToLoginOnAction" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #3C6E55;" text="Login" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>

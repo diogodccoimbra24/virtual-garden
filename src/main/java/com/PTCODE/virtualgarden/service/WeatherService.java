@@ -31,7 +31,7 @@ public class WeatherService {
             double lat = (double) loc.get("latitude");
             double lon = (double) loc.get("longitude");
 
-            //Store the coordinates in the gardens region DC
+            //Store the coordinates in the gardens weather DC
             region.setCoordinates(lat, lon);
 
 

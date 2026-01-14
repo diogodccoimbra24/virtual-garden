@@ -102,8 +102,8 @@ public class GardenApp {
     }
 
     //Method to show register DC
-    public void register(String username, String password){
-        authManager.registerUser(username, password);
+    public boolean register(String username, String password){
+        return authManager.registerUser(username, password);
     }
 
     //Method to logout DC

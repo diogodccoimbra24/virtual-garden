@@ -4,7 +4,6 @@ import com.PTCODE.virtualgarden.app.GardenApp;
 import com.PTCODE.virtualgarden.view.SceneManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import com.PTCODE.virtualgarden.view.MainView;
 
 
 public class Interface extends Application {

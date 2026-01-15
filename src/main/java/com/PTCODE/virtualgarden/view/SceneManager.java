@@ -34,6 +34,7 @@ public class SceneManager {
                 stage.setResizable(false);
             } else {
                 stage.setMaximized(true);
+
                 stage.setResizable(false);
             }
 
@@ -45,6 +46,11 @@ public class SceneManager {
             //For login DC
             if (controller instanceof LoginController) {
                 ((LoginController) controller).setApp(app);
+            }
+
+            //For menu DA
+            if (controller instanceof MenuController) {
+                ((MenuController) controller).setApp(app);
             }
 
             stage.setScene(new Scene(root));

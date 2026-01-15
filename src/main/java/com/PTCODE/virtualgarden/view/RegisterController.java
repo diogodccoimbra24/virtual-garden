@@ -27,18 +27,15 @@ public class RegisterController {
 
         String username = usernameField.getText();
         String password = passwordField.getText();
-
-        //Check if the confirmed password field is filled DC
-        if (confirmPasswordField != null) {
-            String confirm = confirmPasswordField.getText();
-            //Check if the confirmed password is equal to initial password DC
-            if (password.equals(confirm)) {
-                return;
-            }
-        }
+        String confirm = confirmPasswordField.getText();
 
         //If one the fields is not fill it will not advance DC
         if (username == null || username.isBlank() || password == null || password.isBlank()) {
+            return;
+        }
+
+        //Check if the confirmed password is equal to initial password DC
+        if (!password.equals(confirm)) {
             return;
         }
 
@@ -48,8 +45,6 @@ public class RegisterController {
         //If success is true switch scene to login DC
         if (success) {
             SceneManager.switchScene("/fxml/login.fxml");
-        } else {
-            return;
         }
     }
 

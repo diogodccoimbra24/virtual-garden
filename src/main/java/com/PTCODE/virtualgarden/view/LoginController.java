@@ -1,5 +1,6 @@
 package com.PTCODE.virtualgarden.view;
 
+import com.PTCODE.virtualgarden.app.GardenApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,29 +15,37 @@ import javax.swing.*;
 
 public class LoginController  {
 
-    @FXML
-    private Label LoginMessageLabel;
-    @FXML
-    private TextField usernameInput;
-    @FXML
-    private PasswordField passwordInput;
+    @FXML private TextField usernameField;
+    @FXML private PasswordField passwordField;
 
+    private GardenApp app;
 
+    //App setter DC
+    public void setApp(GardenApp app) {
+        this.app = app;
+    }
 
-    public void loginButtonOnAction(ActionEvent event){
+    //Button to login and proceed to main manu DC
+    public void loginButtonOnAction(){
 
-        if (usernameInput.getText().isBlank() == false && passwordInput.getText().isBlank() == false) {
-            LoginMessageLabel.setText("You try to login!");
+        String username = usernameField.getText();
+        String password = passwordField.getText();
 
-        }else {
-            LoginMessageLabel.setText("Please enter username and password!");
+        //If one the fields is not fill it will not advance DC
+        if (username == null || username.isBlank() || password == null || password.isBlank()) {
+            return;
+        }
+
+        boolean success = app.login(username, password);
+
+        //If succes is true switch to menu scene DC
+        if (success) {
+            SceneManager.switchScene("/fxml/Menu.fxml");
         }
     }
-    public void onSignUpClick(ActionEvent event) throws Exception{
+
+    //Button to come back to Sign in page DC
+    public void backToSignInOnAction() {
         SceneManager.switchScene("/fxml/CreateAccount.fxml");
     }
-
-
-
-
 }

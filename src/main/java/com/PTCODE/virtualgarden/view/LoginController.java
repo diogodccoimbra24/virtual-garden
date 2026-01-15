@@ -17,6 +17,7 @@ public class LoginController  {
 
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
+    @FXML private Label loginMessageLabel;
 
     private GardenApp app;
 
@@ -31,8 +32,9 @@ public class LoginController  {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        //If one the fields is not fill it will not advance DC
+        //If one the fields is not filled, it will not advance DC
         if (username == null || username.isBlank() || password == null || password.isBlank()) {
+            loginMessageLabel.setText("Please fill every field!");
             return;
         }
 
@@ -41,6 +43,8 @@ public class LoginController  {
         //If succes is true switch to menu scene DC
         if (success) {
             SceneManager.switchScene("/fxml/Menu.fxml");
+        } else {
+            loginMessageLabel.setText("Username or Password incorrect.");
         }
     }
 

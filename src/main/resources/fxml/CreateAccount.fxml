@@ -44,7 +44,8 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Label layoutX="-20.0" layoutY="-16.0" prefHeight="33.0" prefWidth="73.0" text="Username">
+             <Label fx:id="registerMessageLabel" layoutX="-20.0" layoutY="200.0" prefWidth="329.0" alignment="CENTER" textFill="red" wrapText="true"/>
+             <Label layoutX="-20.0" layoutY="-16.0" prefHeight="33.0" prefWidth="73.0" text="Username">
                <font>
                   <Font size="13.0" />
                </font>

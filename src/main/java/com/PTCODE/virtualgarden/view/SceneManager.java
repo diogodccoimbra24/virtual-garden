@@ -27,6 +27,16 @@ public class SceneManager {
             //Inserting GardenApp in the controller DC
             Object controller = loader.getController();
 
+
+            if (fxml.contains("login") || fxml.contains("CreateAccount") || fxml.contains("CreateGarden") || fxml.contains("AddPlant")){
+                stage.setMaximized(false);
+                stage.sizeToScene();
+                stage.setResizable(false);
+            } else {
+                stage.setMaximized(true);
+                stage.setResizable(false);
+            }
+
             //For Regist DC
             if (controller instanceof RegisterController) {
                 ((RegisterController) controller).setApp(app);
@@ -38,6 +48,7 @@ public class SceneManager {
             }
 
             stage.setScene(new Scene(root));
+            stage.centerOnScreen();
             stage.show();
 
         } catch (Exception e) {

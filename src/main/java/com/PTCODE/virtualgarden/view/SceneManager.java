@@ -53,6 +53,11 @@ public class SceneManager {
                 ((MenuController) controller).setApp(app);
             }
 
+            //for CreateGardenController
+            if(controller instanceof CreateGardenController) {
+                ((CreateGardenController) controller).setApp(app);
+            }
+
             stage.setScene(new Scene(root));
             stage.centerOnScreen();
             stage.show();

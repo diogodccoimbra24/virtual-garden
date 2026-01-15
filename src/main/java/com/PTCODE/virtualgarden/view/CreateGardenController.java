@@ -27,6 +27,7 @@ public class CreateGardenController {
 
         if (name.isBlank() || cityName.isBlank()) {
             ErrorLabel.setText("Please fill every field!");
+            return;
 
         }
 
@@ -34,11 +35,11 @@ public class CreateGardenController {
         boolean success = app.createGarden(name, region);
 
         if (success) {
-            SceneManager.switchScene("GardenManager.fxml");
+            SceneManager.switchScene("/fxml/GardenManager.fxml");
         }
     }
     public void exitButtonOnAction(){
-        SceneManager.switchScene("login.fxml");
+        SceneManager.switchScene("/fxml/login.fxml");
     }
 
 }

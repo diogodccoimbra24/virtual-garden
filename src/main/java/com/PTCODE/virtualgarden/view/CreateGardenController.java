@@ -17,8 +17,11 @@ public class CreateGardenController {
     private Label ErrorLabel;
 
     private GardenApp app;
+
+    //indicate whether the garden was successfully created GD
     private boolean gardenCreated = false;
-    //App setter DC
+
+    //App setter GD
     public void setApp(GardenApp app) {
         this.app = app;
     }
@@ -29,9 +32,12 @@ public class CreateGardenController {
 
     @FXML
     public void CreateGardenButtonOnAction() {
+
+        // Get user input from text fields GD
         String name = gardenName.getText();
         String cityName = city.getText();
 
+        // Validate input GD
         if (name.isBlank() || cityName.isBlank()) {
             ErrorLabel.setText("Please fill every field!");
             return;
@@ -39,6 +45,8 @@ public class CreateGardenController {
         }
 
         Region region = new Region(cityName);
+
+        // Attempt to create the garden through the application logic GD
         boolean success = app.createGarden(name, region);
 
         if (success) {

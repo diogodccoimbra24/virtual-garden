@@ -74,7 +74,10 @@ public class SceneManager {
 
 
 
+
+
             stage.setScene(new Scene(root));
+            stage.setTitle("Virtual Garden");
             stage.centerOnScreen();
             stage.show();
 

@@ -72,6 +72,11 @@ public class SceneManager {
                 ((ViewGardensController) controller).setApp(app);
             }
 
+            if (controller instanceof AddPlantController) {
+                ((AddPlantController) controller).setApp(app);
+            }
+
+
 
 
             stage.setScene(new Scene(root));

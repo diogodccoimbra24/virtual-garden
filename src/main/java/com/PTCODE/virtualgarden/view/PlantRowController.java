@@ -9,7 +9,6 @@ import javafx.scene.layout.VBox;
 public class PlantRowController {
 
     @FXML private Label plantName;
-    @FXML private Label status;
 
     private Plant plant;
     private GardenApp app;
@@ -19,7 +18,7 @@ public class PlantRowController {
         this.app = app;
 
         plantName.setText(plant.getName());
-        status.setText(plant.getStatus().toString());
+
     }
 
     @FXML

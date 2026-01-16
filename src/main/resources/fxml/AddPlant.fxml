@@ -10,169 +10,169 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <ImageView fitHeight="60.0" fitWidth="600.0" pickOnBounds="true">
-         <image>
-            <Image url="@../image/color.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="131.0" layoutY="9.0" text="Add Plants to your Garden" textFill="WHITE">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </Label>
-      <ScrollPane layoutX="-7.0" layoutY="60.0" prefHeight="305.0" prefWidth="604.0">
-         <content>
-            <HBox prefHeight="290.0" prefWidth="1055.0">
-               <children>
-                  <AnchorPane prefHeight="270.0" prefWidth="160.0">
-                     <children>
-                        <ImageView fitHeight="134.0" fitWidth="113.0" layoutX="56.0" layoutY="69.0" pickOnBounds="true" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="69.0">
-                           <image>
-                              <Image url="@../image/rosa.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" layoutX="55.0" layoutY="14.0" text="Rose">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="41.0" layoutY="44.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Flower">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="AddRose" layoutX="51.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="270.0" prefWidth="126.0">
-                     <children>
-                        <ImageView fitHeight="136.0" fitWidth="142.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
-                           <image>
-                              <Image url="@../image/sunflower.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" layoutX="43.0" layoutY="10.0" text="Sunflower">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="55.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Flower">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="AddSunflower" layoutX="68.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="136.0" fitWidth="121.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
-                           <image>
-                              <Image url="@../image/tulippink.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" layoutX="57.0" layoutY="10.0" text="Tulip">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="44.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Flower">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="AddTulip" layoutX="62.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="136.0" fitWidth="138.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
-                           <image>
-                              <Image url="@../image/carrot.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" layoutX="59.0" layoutY="10.0" text="Carrot">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="53.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Vegetable">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="AddCarrot" layoutX="66.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="136.0" fitWidth="145.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
-                           <image>
-                              <Image url="@../image/potatos.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" layoutX="61.0" layoutY="10.0" text="Potato">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="56.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Vegetable">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="AddPotato" layoutX="75.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="138.0" fitWidth="162.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
-                           <image>
-                              <Image url="@../image/tomato.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" layoutX="64.0" layoutY="10.0" text="Tomato">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="65.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Fruit">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="AddTomato" layoutX="85.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </HBox>
-         </content>
-      </ScrollPane>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.AddPlantController">
+    <children>
+        <ImageView fitHeight="60.0" fitWidth="600.0" pickOnBounds="true">
+            <image>
+                <Image url="@../image/color.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="131.0" layoutY="9.0" text="Add Plants to your Garden" textFill="WHITE">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+        <ScrollPane layoutX="-7.0" layoutY="60.0" prefHeight="305.0" prefWidth="604.0">
+            <content>
+                <HBox prefHeight="290.0" prefWidth="1055.0">
+                    <children>
+                        <AnchorPane prefHeight="270.0" prefWidth="160.0">
+                            <children>
+                                <ImageView fitHeight="134.0" fitWidth="113.0" layoutX="56.0" layoutY="69.0" pickOnBounds="true" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="69.0">
+                                    <image>
+                                        <Image url="@../image/rosa.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" layoutX="55.0" layoutY="14.0" text="Rose">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="41.0" layoutY="44.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Flower">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="AddRose" layoutX="51.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE" onAction="#addRoseButtonOnAction">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="270.0" prefWidth="126.0">
+                            <children>
+                                <ImageView fitHeight="136.0" fitWidth="142.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                    <image>
+                                        <Image url="@../image/sunflower.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" layoutX="43.0" layoutY="10.0" text="Sunflower">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="55.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Flower">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="AddSunflower" layoutX="68.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE" onAction="#addSunflowerButtonOnAction">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="136.0" fitWidth="121.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                    <image>
+                                        <Image url="@../image/tulippink.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" layoutX="57.0" layoutY="10.0" text="Tulip">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="44.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Flower">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="AddTulip" layoutX="62.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE" onAction="#addTulipButtonOnAction">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="136.0" fitWidth="138.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                    <image>
+                                        <Image url="@../image/carrot.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" layoutX="59.0" layoutY="10.0" text="Carrot">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="53.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Vegetable">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="AddCarrot" layoutX="66.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE" onAction="#addCarrotButtonOnAction">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="136.0" fitWidth="145.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                    <image>
+                                        <Image url="@../image/potatos.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" layoutX="61.0" layoutY="10.0" text="Potato">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="56.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Vegetable">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="AddPotato" layoutX="75.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE" onAction="#addPotatoButtonOnAction">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="138.0" fitWidth="162.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                    <image>
+                                        <Image url="@../image/tomato.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" layoutX="64.0" layoutY="10.0" text="Tomato">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="65.0" layoutY="40.0" opacity="0.53" prefHeight="19.0" prefWidth="73.0" text="Fruit">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="AddTomato" layoutX="85.0" layoutY="232.0" mnemonicParsing="false" style="-fx-background-color: #3C6E55;" text="Add" textFill="WHITE" onAction="#addTomatoButtonOnAction">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            </content>
+        </ScrollPane>
+    </children>
 </AnchorPane>

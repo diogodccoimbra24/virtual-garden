@@ -7,28 +7,66 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<AnchorPane
+        maxHeight="-Infinity"
+        maxWidth="-Infinity"
+        minHeight="-Infinity"
+        minWidth="-Infinity"
+        prefHeight="120.0"
+        prefWidth="1465.0"
+        xmlns="http://javafx.com/javafx/25"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.PTCODE.virtualgarden.view.PlantRowController">
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1465.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.PlantRowController">
-   <children>
-      <Label fx:id="plantName" layoutX="74.0" layoutY="41.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="33.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Button layoutX="1366.0" layoutY="26.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="69.0" prefWidth="70.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="26.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="1032.0" layoutY="16.0" mnemonicParsing="false" onAction="#statusButtonOnAction" prefHeight="60.0" prefWidth="152.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 10;" text="Status" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="26.0">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="80.0" fitWidth="84.0" layoutX="1348.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/trash.png" />
-         </image>
-      </ImageView>
-   </children>
+    <children>
+
+        <!-- Plant name -->
+        <Label fx:id="plantName"
+               layoutX="74.0"
+               layoutY="41.0"
+               AnchorPane.leftAnchor="74.0">
+            <font>
+                <Font size="36.0"/>
+            </font>
+        </Label>
+
+
+
+        <!-- Status button -->
+        <Button layoutX="1032.0"
+                layoutY="26.0"
+                mnemonicParsing="false"
+                onAction="#statusButtonOnAction"
+                prefHeight="60.0"
+                prefWidth="152.0"
+                style="-fx-background-color: #3C6E55; -fx-background-radius: 10;"
+                text="Status"
+                textFill="WHITE">
+            <font>
+                <Font size="32.0"/>
+            </font>
+        </Button>
+
+        <!-- Delete button -->
+        <Button layoutX="1366.0"
+                layoutY="26.0"
+                mnemonicParsing="false"
+                onAction="#deleteButtonOnAction"
+                prefHeight="69.0"
+                prefWidth="70.0"
+                style="-fx-background-color: transparent;"/>
+
+        <!-- Trash icon -->
+        <ImageView fitHeight="80.0"
+                   fitWidth="84.0"
+                   layoutX="1348.0"
+                   layoutY="21.0"
+                   pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/trash.png"/>
+            </image>
+        </ImageView>
+
+    </children>
 </AnchorPane>

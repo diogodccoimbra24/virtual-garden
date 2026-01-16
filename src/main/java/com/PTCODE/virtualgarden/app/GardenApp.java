@@ -3,6 +3,8 @@ package com.PTCODE.virtualgarden.app;
 import com.PTCODE.virtualgarden.auth.AuthenticationManager;
 import com.PTCODE.virtualgarden.auth.User;
 import com.PTCODE.virtualgarden.model.Garden;
+import com.PTCODE.virtualgarden.model.Plant;
+import com.PTCODE.virtualgarden.model.PlantType;
 import com.PTCODE.virtualgarden.model.Region;
 import com.PTCODE.virtualgarden.service.WeatherService;
 
@@ -117,6 +119,16 @@ public class GardenApp {
 
     public User getCurrentUser(){
         return authManager.getCurrentUser();
+    }
+
+    public boolean addPlantToCurrentGarden(PlantType plantType) {
+        if (currentGarden == null || plantType == null){
+            return false;
+        }
+
+        Plant plant = new Plant(plantType);
+        currentGarden.addPlant(plant);
+        return true;
     }
 
 }

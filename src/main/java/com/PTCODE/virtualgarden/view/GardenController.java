@@ -85,7 +85,27 @@ public class GardenController {
     }
 
     public void storeButtonOnAction() {
-        SceneManager.switchScene("/fxml/AddPlant.fxml");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AddPlant.fxml"));
+            Parent root = loader.load();
+
+            AddPlantController controller = loader.getController();
+            controller.setApp(app);
+
+            Stage popup = new Stage();
+            popup.setTitle("Add Plant");
+            popup.setScene(new Scene(root));
+
+            popup.showAndWait();
+
+            updateUI();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
     //Button to delete garden DC

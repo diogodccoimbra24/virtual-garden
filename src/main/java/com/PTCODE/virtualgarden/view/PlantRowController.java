@@ -32,7 +32,7 @@ public class PlantRowController {
     private void deleteButtonOnAction() {
         app.getCurrentGarden().removePlant(plant);
 
-        // remover da UI
+        // remove UI GD
         VBox container = (VBox) plantName.getParent().getParent();
         container.getChildren().remove(plantName.getParent());
     }

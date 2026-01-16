@@ -21,8 +21,7 @@ public class ViewGardensController {
     private Label city;
     @FXML
     private VBox gardensContainer;
-    @FXML
-    private AnchorPane template;
+
 
 
     private GardenApp app;
@@ -35,8 +34,9 @@ public class ViewGardensController {
     }
 
     public void loadGardens(){
-        gardensContainer.getChildren().clear();
+        gardensContainer.getChildren().clear();   //clear the  vbox content
 
+        //list of gardens the currentUser GD
         List<Garden> gardens = app.getCurrentUserGardens();
 
         for (Garden garden : gardens) {

@@ -32,8 +32,9 @@ public class GardenRowController {
     @FXML
     private void onDeleteGarden(){
         app.deleteGarden(garden);
-        ((VBox) gardenName.getParent().getParent()).getChildren().remove(
-                gardenName.getParent()
-        );
+
+        VBox container = (VBox) gardenName.getParent().getParent();
+        container.getChildren().remove(gardenName.getParent());
+
     }
 }

@@ -6,14 +6,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class MenuController {
+
+    @FXML
+    private Label labelUsername;
 
     private GardenApp app;
 
     public void setApp(GardenApp app) {
         this.app = app;
+
+        if (app.getCurrentUser() != null) {
+            labelUsername.setText(app.getCurrentUser().getUsername());   //show username GD
+        }
     }
 
 

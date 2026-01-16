@@ -11,7 +11,7 @@ public class Region {
     // to create a region the user must tell us where it is and what climate it has (DA)
     public Region(String city) {
         this.city = city;
-        this.latitude = Double.NaN; // means "unknown yet"
+        this.latitude = Double.NaN;
         this.longitude = Double.NaN;
     }
 

@@ -51,20 +51,6 @@ public class Plant {
         }
     }
 
-    //Method to get the info of what the plant needs (getter) DC
-    public String getCareInfo() {
-
-        if(status.equals("healthy")){
-            return "No need to apply any product to this " + plantType.getCategory();
-
-        }if (status.equals("thirsty")) {
-            return "Your " + getName() + " is thirsty. Apply some " + ProductType.WATER.getName();
-
-        }if (status.equals("dying")) {
-            return "Your " + getName() + " needs to be taken care. Apply some " + ProductType.FERTILIZER.getName();
-        }
-        return "plant status unknown";
-    }
 
     //Method to update the status of the plant based on the weather DC
     public void updateStatusFromWeather(double temperature) {

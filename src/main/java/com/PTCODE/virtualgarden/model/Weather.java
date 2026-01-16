@@ -5,7 +5,6 @@ public class Weather {
     //Attributes (DA)
     private double temperature;
     private double humidity;
-    private String conditions;
     private Region region;
 
     //Constructor (DA)
@@ -13,7 +12,6 @@ public class Weather {
 
         //Initialize with default values (DA)
         this.region = region;
-        this.conditions = "Unknown";
     }
 
     //Method to update the weather (DA)
@@ -26,10 +24,6 @@ public class Weather {
         this.humidity = humidity;
     }
 
-    public void setConditions(String conditions) {
-        this.conditions = conditions;
-    }
-
     public double getTemperature() {
         return temperature;
     }
@@ -38,16 +32,5 @@ public class Weather {
         return humidity;
     }
 
-    public String getConditions() {
-        return conditions;
-    }
-
-
-    public String getWeatherSummary(){
-        return "Temperature: " + String.format("%.1f", temperature) + "ºC"
-                + " Humidity: " + String.format("%.1f", humidity) + "%"
-                + " Conditions: " + conditions;
-
-    }
 }
 

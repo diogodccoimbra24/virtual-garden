@@ -7,6 +7,7 @@ import com.PTCODE.virtualgarden.model.Plant;
 import com.PTCODE.virtualgarden.model.PlantType;
 import com.PTCODE.virtualgarden.model.Region;
 import com.PTCODE.virtualgarden.service.WeatherService;
+import com.PTCODE.virtualgarden.store.PlantStore;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -19,6 +20,8 @@ public class GardenApp {
     private AuthenticationManager authManager;
     private Garden currentGarden;
     private WeatherService weatherService = new WeatherService();
+    private final PlantStore plantStore = new PlantStore();
+
 
     //Constructor DC
     public GardenApp() {
@@ -132,9 +135,7 @@ public class GardenApp {
             return false;
         }
 
-        Plant plant = new Plant(plantType);
-        currentGarden.addPlant(plant);
-        return true;
+        return plantStore.addPlantToGarden(currentGarden, plantType);
     }
 
 }

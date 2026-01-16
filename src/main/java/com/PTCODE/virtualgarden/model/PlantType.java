@@ -4,12 +4,12 @@ public enum PlantType {
 
     //Plants available in the plant store DC
     //Flowers DC
-    ROSE("Rose", "Flower", 14, 21),
+    ROSE("Rose", "Flower", 14, 10),
     SUNFLOWER("Sunflower", "Flower", 16, 23),
     TULIP("Tulip", "Flower", 12, 18),
 
     //Vegetables DC
-    CARROT("Carrot", "Vegetable", 11, 26),
+    CARROT("Carrot", "Vegetable", 20, 13),
     POTATO("Potato", "Vegetable", 14, 29),
     TOMATO("Tomato", "Vegetable", 15, 20);
 

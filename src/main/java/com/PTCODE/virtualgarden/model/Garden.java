@@ -10,7 +10,6 @@ public class Garden {
     private Region region;
     private Weather weather;
     private List<Plant> plants;
-    private List<Notification> notifications;
 
     //Constructor DC
     public Garden(String name, Region region) {
@@ -18,7 +17,6 @@ public class Garden {
         this.region = region;
         this.weather = new Weather(region);
         this.plants = new ArrayList<Plant>();
-        this.notifications = new ArrayList<Notification>();
     }
 
     //Method to add a plant to the garden DC
@@ -41,24 +39,6 @@ public class Garden {
         }
     }
 
-    //Method to Check plant status (health etc...) DC
-    public void checkPlantStatus() {
-        //in the list of plants it will check if the status of each one is healthy DC
-        //if it's not then will create a notification displaying the name and type of the plant DC
-
-        //That way it won't spam notifications
-        notifications.clear();
-        for(Plant plant : plants ){
-            if(!plant.getStatus().equals("healthy")){
-                //Displayed message when a notification pops up DC
-                String message = "Plant " + plant.getName() + "( " + plant.getType() + " )" + " is currently " + plant.getStatus();
-
-                Notification notification = new Notification(message, plant.getType());
-                notifications.add(notification);
-            }
-        }
-
-    }
 
     //It will update the plants based on the weather DC
     public void updatePlantsByWeather() {
@@ -85,10 +65,6 @@ public class Garden {
         return this.name;
     }
 
-    //Method to get the notifications from the list (getter) DC
-    public List<Notification> getNotifications() {
-        return this.notifications;
-    }
 
     //Method to get the region (getter) DC
     public Region getRegion(){

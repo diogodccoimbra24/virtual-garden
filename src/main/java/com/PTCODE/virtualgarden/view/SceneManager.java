@@ -58,6 +58,16 @@ public class SceneManager {
                 ((CreateGardenController) controller).setApp(app);
             }
 
+            //for Garden controller DC
+            if(controller instanceof  GardenController) {
+                ((GardenController) controller).setApp(app);
+            }
+
+            //for weather controller DC
+            if(controller instanceof WeatherController) {
+                ((WeatherController) controller).setApp(app);
+            }
+
             stage.setScene(new Scene(root));
             stage.centerOnScreen();
             stage.show();

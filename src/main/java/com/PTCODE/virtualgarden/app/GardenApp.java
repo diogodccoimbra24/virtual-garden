@@ -115,4 +115,5 @@ public class GardenApp {
     public User getCurrentUser(){
         return authManager.getCurrentUser();
     }
+
 }

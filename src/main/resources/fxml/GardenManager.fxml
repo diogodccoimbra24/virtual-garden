@@ -13,8 +13,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.ListView?>
-
 
 <AnchorPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.GardenController">
    <children>
@@ -95,6 +93,10 @@
             <Font size="28.0" />
          </font>
       </Label>
-       <ListView fx:id="plantsListView" layoutX="317.0" layoutY="242.0" prefHeight="588.0" prefWidth="1492.0" />
+      <ScrollPane layoutX="351.0" layoutY="283.0" prefHeight="676.0" prefWidth="1470.0">
+         <content>
+            <VBox fx:id="plantContainer" prefHeight="156.0" prefWidth="1472.0" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

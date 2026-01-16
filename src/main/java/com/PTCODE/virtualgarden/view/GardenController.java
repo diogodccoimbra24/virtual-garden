@@ -8,7 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -16,17 +18,17 @@ public class GardenController {
 
     @FXML private Label gardenNameLabel;
     @FXML private Label cityLabel;
-    @FXML private ListView<String> plantsListView;
+    @FXML private VBox plantContainer;
 
     private GardenApp app;
 
     public void setApp(GardenApp app){
         this.app = app;
         //fill ui when screen loads DC
-        refresh();
+        updateUI();
     }
 
-    private void refresh() {
+    private void updateUI() {
         if (app == null) return;
 
         Garden g = app.getCurrentGarden();
@@ -37,11 +39,22 @@ public class GardenController {
         if (cityLabel != null && g.getRegion() != null) {
             cityLabel.setText(g.getRegion().getCity());
         }
+        plantContainer.getChildren().clear();
 
-        if (plantsListView != null) {
-            plantsListView.getItems().clear();
-            for (Plant p : g.getPlants()) {
-                plantsListView.getItems().add(p.getName() + " - " + p.getStatus());
+        for (Plant plant : g.getPlants()) {
+            try {
+                FXMLLoader loader = new FXMLLoader(
+                        getClass().getResource("/fxml/PlantRow.fxml")
+                );
+
+                AnchorPane row = loader.load();
+                PlantRowController controller = loader.getController();
+                controller.setData(plant, app);
+
+                plantContainer.getChildren().add(row);
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }

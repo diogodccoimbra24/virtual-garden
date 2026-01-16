@@ -40,8 +40,7 @@ public class PlantRowController {
             popup.setScene(new Scene(root));
             popup.showAndWait(); // wait until user closes
 
-            // update the status label in this row after applying product
-            status.setText(plant.getStatus());
+
 
         } catch (Exception e) {
             e.printStackTrace();

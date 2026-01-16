@@ -25,12 +25,12 @@
             <Image url="@../image/color.png" />
          </image>
       </ImageView>
-      <Label fx:id="statusLabel" alignment="CENTER" layoutX="178.0" layoutY="5.0" text="Status" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="178.0" layoutY="5.0" text="Status" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="updatedStatus" alignment="CENTER" layoutY="35.0" prefHeight="30" prefWidth="400">
+      <Label fx:id="statusLabel" alignment="CENTER" layoutY="35.0" prefHeight="30" prefWidth="400">
          <font>
             <Font size="31.0" />
          </font></Label>

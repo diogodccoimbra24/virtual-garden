@@ -39,7 +39,4 @@ public class Region {
 
     }
 
-    public boolean hasCoordinates(){
-        return !Double.isNaN(latitude) && !Double.isNaN(longitude);
-    }
 }

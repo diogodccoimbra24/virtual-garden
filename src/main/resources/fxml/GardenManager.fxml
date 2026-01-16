@@ -13,8 +13,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ListView?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.GardenController">
    <children>
       <ImageView fitHeight="1085.0" fitWidth="1664.0" layoutX="257.0" layoutY="-3.0" opacity="0.05" pickOnBounds="true">
          <image>
@@ -26,7 +28,7 @@
             <Image url="@../image/color.png" />
          </image>
       </ImageView>
-      <Button layoutX="33.0" layoutY="962.0" mnemonicParsing="false" opacity="0.93" prefHeight="80.0" prefWidth="196.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 20;" text="Menu" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="32.0">
+      <Button layoutX="33.0" layoutY="962.0" mnemonicParsing="false" onAction="#menuButtonOnAction" opacity="0.93" prefHeight="80.0" prefWidth="196.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 20;" text="Menu" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="32.0">
          <font>
             <Font size="38.0" />
          </font>
@@ -49,17 +51,17 @@
             </Lighting>
          </effect>
       </ImageView>
-      <Button layoutX="37.0" layoutY="133.0" mnemonicParsing="false" prefHeight="181.0" prefWidth="178.0" style="-fx-background-color: transparent;">
+      <Button layoutX="37.0" layoutY="133.0" mnemonicParsing="false" onAction="#weatherButtonOnAction" prefHeight="181.0" prefWidth="178.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label alignment="CENTER" layoutX="329.0" layoutY="45.0" prefHeight="97.0" prefWidth="596.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" text="#nome do jardim" textFill="WHITE">
+      <Label fx:id="gardenNameLabel" alignment="CENTER" layoutX="329.0" layoutY="45.0" prefHeight="97.0" prefWidth="596.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" textFill="WHITE">
          <font>
             <Font size="55.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="987.0" layoutY="47.0" prefHeight="97.0" prefWidth="648.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" text="#pais" textFill="WHITE">
+      <Label fx:id="cityLabel" alignment="CENTER" layoutX="987.0" layoutY="47.0" prefHeight="97.0" prefWidth="648.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" textFill="WHITE">
          <font>
             <Font size="55.0" />
          </font>
@@ -83,7 +85,7 @@
             </Lighting>
          </effect>
       </ImageView>
-      <Button layoutX="1743.0" layoutY="41.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="98.0" style="-fx-background-color: transparent;">
+      <Button layoutX="1743.0" layoutY="41.0" mnemonicParsing="false" onAction="#storeButtonOnAction" prefHeight="91.0" prefWidth="98.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -93,42 +95,6 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="317.0" layoutY="242.0" prefHeight="588.0" prefWidth="1492.0" style="-fx-border-radius: 10;">
-         <content>
-            <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="588.0" prefWidth="1494.0">
-               <children>
-                  <AnchorPane prefHeight="120.0" prefWidth="1494.0" style="-fx-border-color: grey; -fx-border-radius: 10;">
-                     <children>
-                        <Label alignment="CENTER" layoutX="79.0" layoutY="30.0" text="Nome da planta">
-                           <font>
-                              <Font size="38.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1216.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/notification.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="1224.0" layoutY="27.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="49.0" style="-fx-background-color: transparent;">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1330.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/trash.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="1338.0" layoutY="30.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="49.0" style="-fx-background-color: transparent;">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </VBox>
-         </content>
-      </ScrollPane>
+       <ListView fx:id="plantsListView" layoutX="317.0" layoutY="242.0" prefHeight="588.0" prefWidth="1492.0" />
    </children>
 </AnchorPane>

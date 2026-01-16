@@ -21,7 +21,7 @@ public class Weather {
         this.temperature = temperature;
     }
 
-    //Method to get the current weather summary (getter) (DA)
+
     public void setHumidity(double humidity) {
         this.humidity = humidity;
     }
@@ -29,6 +29,19 @@ public class Weather {
     public void setConditions(String conditions) {
         this.conditions = conditions;
     }
+
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public double getHumidity() {
+        return humidity;
+    }
+
+    public String getConditions() {
+        return conditions;
+    }
+
 
     public String getWeatherSummary(){
         return "Temperature: " + String.format("%.1f", temperature) + "ºC"

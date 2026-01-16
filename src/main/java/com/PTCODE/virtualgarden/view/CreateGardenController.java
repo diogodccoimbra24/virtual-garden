@@ -5,6 +5,7 @@ import com.PTCODE.virtualgarden.model.Region;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class CreateGardenController {
 
@@ -16,11 +17,17 @@ public class CreateGardenController {
     private Label ErrorLabel;
 
     private GardenApp app;
+    private boolean gardenCreated = false;
     //App setter DC
     public void setApp(GardenApp app) {
         this.app = app;
     }
 
+    public boolean isGardenCreated() {
+        return gardenCreated;
+    }
+
+    @FXML
     public void CreateGardenButtonOnAction() {
         String name = gardenName.getText();
         String cityName = city.getText();
@@ -35,11 +42,17 @@ public class CreateGardenController {
         boolean success = app.createGarden(name, region);
 
         if (success) {
-            SceneManager.switchScene("/fxml/GardenManager.fxml");
+            gardenCreated = true;
+            Stage stage = (Stage) gardenName.getScene().getWindow();
+            stage.close();
+
+        } else {
+            ErrorLabel.setText("Could not create garden!");
         }
     }
     public void exitButtonOnAction(){
-        SceneManager.switchScene("/fxml/login.fxml");
+        Stage stage = (Stage) gardenName.getScene().getWindow();
+        stage.close();
     }
 
 }

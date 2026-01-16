@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.WeatherController">
    <children>
       <ImageView fitHeight="35.0" fitWidth="400.0" pickOnBounds="true">
          <image>
@@ -20,11 +20,10 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutY="35.0" prefHeight="127.0" prefWidth="400.0" text="#temp:  -- prep">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button alignment="CENTER" layoutX="171.0" layoutY="156.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 10;" text="Exit" textFill="WHITE" />
+       <Label fx:id="cityLabel" alignment="CENTER" layoutX="0" layoutY="40" prefWidth="400" prefHeight="20"/>
+       <Label fx:id="temperatureLabel" alignment="CENTER" layoutX="0" layoutY="70" prefWidth="400" prefHeight="30"/>
+       <Label fx:id="humidityLabel" alignment="CENTER" layoutX="0" layoutY="105" prefWidth="400" prefHeight="30"/>
+       <Button alignment="CENTER" layoutX="120.0" layoutY="156.0" mnemonicParsing="false" onAction="#updateWeatherOnAction" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 10;" text="Update" textFill="WHITE" />
+      <Button alignment="CENTER" layoutX="220.0" layoutY="156.0" mnemonicParsing="false" onAction="#closeOnAction" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 10;" text="Exit" textFill="WHITE" />
    </children>
 </AnchorPane>

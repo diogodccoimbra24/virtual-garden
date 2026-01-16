@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.ViewGardensController">
    <children>
       <ImageView fitHeight="1085.0" fitWidth="1788.0" layoutX="133.0" layoutY="-3.0" opacity="0.05" pickOnBounds="true">
          <image>
@@ -27,43 +27,8 @@
       </ImageView>
       <ScrollPane layoutX="197.0" layoutY="235.0" prefHeight="728.0" prefWidth="1686.0" style="-fx-border-radius: 10;">
          <content>
-            <VBox prefHeight="730.0" prefWidth="1688.0">
-               <children>
-                  <AnchorPane prefHeight="124.0" prefWidth="1594.0" style="-fx-border-radius: 10; -fx-border-color: #CDCDCD; -fx-background-radius: 10;">
-                     <children>
-                        <Label layoutX="71.0" layoutY="32.0" text="#Garden name">
-                           <font>
-                              <Font size="43.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="1393.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/enter.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="-3.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="121.0" prefWidth="1507.0" style="-fx-background-color: trasnparent;">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="1531.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/trash.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="1530.0" layoutY="24.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="65.0" style="-fx-background-color: trasnparent;">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Label layoutX="623.0" layoutY="32.0" text="#localização">
-                           <font>
-                              <Font size="43.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-               </children>
+            <VBox prefHeight="730.0" prefWidth="1688.0" fx:id="gardensContainer">
+
             </VBox>
          </content>
       </ScrollPane>
@@ -87,7 +52,7 @@
             </Lighting>
          </effect>
       </ImageView>
-      <Button layoutX="21.0" layoutY="18.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="88.0" style="-fx-background-color: transparent;">
+      <Button layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="105.0" prefWidth="88.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

@@ -53,9 +53,14 @@ public class SceneManager {
                 ((MenuController) controller).setApp(app);
             }
 
-            //for CreateGardenController
+            //for CreateGardenController GD
             if(controller instanceof CreateGardenController) {
                 ((CreateGardenController) controller).setApp(app);
+            }
+
+            //for ViewGardens GD
+            if(controller instanceof ViewGardensController){
+                ((ViewGardensController) controller).setApp(app);
             }
 
             stage.setScene(new Scene(root));

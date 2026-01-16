@@ -34,7 +34,12 @@ public class MenuController {
             Stage popup = new Stage();
             popup.setTitle("Create Garden");
             popup.setScene(new Scene(root));
-            popup.show();
+
+            popup.showAndWait();
+
+            if (controller.isGardenCreated()) {
+                SceneManager.switchScene("/fxml/GardenManager.fxml");
+            }
 
 
         } catch (Exception e) {

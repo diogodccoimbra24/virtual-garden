@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.WeatherController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PTCODE.virtualgarden.view.StatusController">
    <children>
       <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="222.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,7 +25,7 @@
             <Image url="@../image/color.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="178.0" layoutY="5.0" text="Status" textFill="WHITE">
+      <Label fx:id="statusLabel" alignment="CENTER" layoutX="178.0" layoutY="5.0" text="Status" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
@@ -34,12 +34,12 @@
          <font>
             <Font size="31.0" />
          </font></Label>
-      <Button layoutX="110.0" layoutY="120.0" mnemonicParsing="false" onAction="#water" prefHeight="71.0" prefWidth="61.0" style="-fx-background-color: transparent;">
+      <Button layoutX="110.0" layoutY="120.0" mnemonicParsing="false" onAction="#waterButtonOnAction" prefHeight="71.0" prefWidth="61.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="222.0" layoutY="112.0" mnemonicParsing="false" onAction="#fertilizer" prefHeight="84.0" prefWidth="71.0" style="-fx-background-color: transparent;">
+      <Button layoutX="222.0" layoutY="112.0" mnemonicParsing="false" onAction="#fertilizerButtonOnAction" prefHeight="84.0" prefWidth="71.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

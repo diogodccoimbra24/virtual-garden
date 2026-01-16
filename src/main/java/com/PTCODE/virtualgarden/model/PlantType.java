@@ -4,23 +4,28 @@ public enum PlantType {
 
     //Plants available in the plant store DC
     //Flowers DC
-    ROSE("Rose", "Flower"),
-    SUNFLOWER("Sunflower", "Flower"),
-    TULIP("Tulip", "Flower"),
+    ROSE("Rose", "Flower", 14, 21),
+    SUNFLOWER("Sunflower", "Flower", 16, 23),
+    TULIP("Tulip", "Flower", 12, 18),
 
     //Vegetables DC
-    CARROT("Carrot", "Vegetable"),
-    POTATO("Potato", "Vegetable"),
-    TOMATO("Tomato", "Vegetable");
+    CARROT("Carrot", "Vegetable", 11, 26),
+    POTATO("Potato", "Vegetable", 14, 29),
+    TOMATO("Tomato", "Vegetable", 15, 20);
 
     //Attributes as final so it's impossible to modify DC
     private final String name;
     private final String category;
 
+    private final double thirstyTemp;
+    private final double dyingTemp;
+
     //Constructor
-    PlantType(String name, String category){
+    PlantType(String name, String category, double thirstyTemp, double dyingTemp ){
         this.name = name;
         this.category = category;
+        this.thirstyTemp = thirstyTemp;
+        this.dyingTemp = dyingTemp;
     }
 
     //Get the name of the flower or vegetable (getter) DC
@@ -31,5 +36,15 @@ public enum PlantType {
     //Get the type (getter) DC
     public String getCategory(){
         return this.category;
+    }
+
+    //Get the thirsty temperature DC
+    public double getThirstyTemp(){
+        return thirstyTemp;
+    }
+
+    //Get the dying temperature DC
+    public double getDyingTemp() {
+        return dyingTemp;
     }
 }

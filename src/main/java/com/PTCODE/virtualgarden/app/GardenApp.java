@@ -27,10 +27,16 @@ public class GardenApp {
 
     //Method to update the weather in the garden DC
     public boolean updateCurrentGardenWeather() {
-        return weatherService.updateWeatherForRegion(
+        boolean ok = weatherService.updateWeatherForRegion(
                 currentGarden.getWeatherInfo(),
                 currentGarden.getRegion()
         );
+
+        //If the weather updates, it will update the status DC
+        if (ok) {
+            currentGarden.updatePlantsByWeather();
+        }
+        return ok;
     }
 
     //Method to create gardens DC

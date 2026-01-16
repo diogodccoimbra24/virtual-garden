@@ -66,6 +66,20 @@ public class Plant {
         return "plant status unknown";
     }
 
+    //Method to update the status of the plant based on the weather DC
+    public void updateStatusFromWeather(double temperature) {
+        double thirstyAt = plantType.getThirstyTemp();
+        double dyingAt = plantType.getDyingTemp();
+
+        if (temperature >= dyingAt) {
+            status = "dying";
+        } else if (temperature >= thirstyAt) {
+            status = "thirsty";
+        } else {
+            status = "healthy";
+        }
+    }
+
     //Method to get the name of the plant (getter) DC
     public String getName() {
         return plantType.getName();

@@ -20,22 +20,14 @@
 
     <children>
 
-        <ImageView fitHeight="80.0"
-                   fitWidth="84.0"
-                   layoutX="1348.0"
-                   layoutY="21.0"
-                   pickOnBounds="true"
-                   preserveRatio="true">
+        <ImageView fitHeight="80.0" fitWidth="84.0" layoutX="1348.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../image/trash.png"/>
             </image>
         </ImageView>
 
-        <!-- Plant name -->
-        <Label fx:id="plantName"
-               layoutX="74.0"
-               layoutY="41.0"
-               AnchorPane.leftAnchor="74.0">
+
+        <Label fx:id="plantName" layoutX="74.0" layoutY="41.0" AnchorPane.leftAnchor="74.0">
             <font>
                 <Font size="36.0"/>
             </font>
@@ -43,30 +35,16 @@
 
 
 
-        <!-- Status button -->
-        <Button layoutX="1032.0"
-                layoutY="26.0"
-                mnemonicParsing="false"
-                onAction="#statusButtonOnAction"
-                prefHeight="60.0"
-                prefWidth="152.0"
-                style="-fx-background-color: #3C6E55; -fx-background-radius: 10;"
-                text="Status"
-                textFill="WHITE">
+
+        <Button layoutX="1032.0" layoutY="26.0" mnemonicParsing="false" onAction="#statusButtonOnAction" prefHeight="60.0" prefWidth="152.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 10;" text="Status" textFill="WHITE">
             <font>
                 <Font size="32.0"/>
             </font>
 
         </Button>
 
-        <!-- Delete button -->
-        <Button layoutX="1366.0"
-                layoutY="26.0"
-                mnemonicParsing="false"
-                onAction="#deleteButtonOnAction"
-                prefHeight="69.0"
-                prefWidth="70.0"
-                style="-fx-background-color: transparent;">
+
+        <Button layoutX="1366.0" layoutY="26.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="69.0" prefWidth="70.0" style="-fx-background-color: transparent;">
             <font>
                 <Font size="18.0"/>
             </font>

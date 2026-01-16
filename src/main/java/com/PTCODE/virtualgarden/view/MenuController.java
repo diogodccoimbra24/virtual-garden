@@ -3,6 +3,10 @@ package com.PTCODE.virtualgarden.view;
 
 import com.PTCODE.virtualgarden.app.GardenApp;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class MenuController {
 
@@ -20,7 +24,22 @@ public class MenuController {
 
     @FXML
     public void addGardenButtonOnAction(){
-        SceneManager.switchScene("/fxml/CreateGarden.fxml");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CreateGarden.fxml"));
+            Parent root = loader.load();
+
+            CreateGardenController controller = loader.getController();
+            controller.setApp(app);
+
+            Stage popup = new Stage();
+            popup.setTitle("Create Garden");
+            popup.setScene(new Scene(root));
+            popup.show();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

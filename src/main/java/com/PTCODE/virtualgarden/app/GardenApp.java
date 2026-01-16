@@ -3,6 +3,8 @@ package com.PTCODE.virtualgarden.app;
 import com.PTCODE.virtualgarden.auth.AuthenticationManager;
 import com.PTCODE.virtualgarden.auth.User;
 import com.PTCODE.virtualgarden.model.Garden;
+import com.PTCODE.virtualgarden.model.Plant;
+import com.PTCODE.virtualgarden.model.PlantType;
 import com.PTCODE.virtualgarden.model.Region;
 import com.PTCODE.virtualgarden.service.WeatherService;
 
@@ -27,10 +29,16 @@ public class GardenApp {
 
     //Method to update the weather in the garden DC
     public boolean updateCurrentGardenWeather() {
-        return weatherService.updateWeatherForRegion(
+        boolean ok = weatherService.updateWeatherForRegion(
                 currentGarden.getWeatherInfo(),
                 currentGarden.getRegion()
         );
+
+        //If the weather updates, it will update the status DC
+        if (ok) {
+            currentGarden.updatePlantsByWeather();
+        }
+        return ok;
     }
 
     //Method to create gardens DC
@@ -45,6 +53,9 @@ public class GardenApp {
         //Uses the method from Garden DC
         Garden garden = new Garden(name, region);
         user.addGarden(garden);
+
+        this.currentGarden = garden;
+
         return true;
     }
 
@@ -115,4 +126,15 @@ public class GardenApp {
     public User getCurrentUser(){
         return authManager.getCurrentUser();
     }
+
+    public boolean addPlantToCurrentGarden(PlantType plantType) {
+        if (currentGarden == null || plantType == null){
+            return false;
+        }
+
+        Plant plant = new Plant(plantType);
+        currentGarden.addPlant(plant);
+        return true;
+    }
+
 }

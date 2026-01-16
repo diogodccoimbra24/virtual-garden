@@ -58,7 +58,31 @@ public class SceneManager {
                 ((CreateGardenController) controller).setApp(app);
             }
 
+            //for Garden controller DC
+            if(controller instanceof  GardenController) {
+                ((GardenController) controller).setApp(app);
+            }
+
+            //for weather controller DC
+            if(controller instanceof WeatherController) {
+                ((WeatherController) controller).setApp(app);
+            }
+
+            if(controller instanceof ViewGardensController){
+                ((ViewGardensController) controller).setApp(app);
+            }
+
+            if (controller instanceof AddPlantController) {
+                ((AddPlantController) controller).setApp(app);
+            }
+
+
+
+
+
+
             stage.setScene(new Scene(root));
+            stage.setTitle("Virtual Garden");
             stage.centerOnScreen();
             stage.show();
 

@@ -70,12 +70,12 @@
             </Lighting>
          </effect>
       </ImageView>
-      <Label alignment="BOTTOM_CENTER" layoutX="36.0" layoutY="228.0" prefHeight="36.0" prefWidth="159.0" text="Username" textAlignment="CENTER" textFill="WHITE">
+      <Label  fx:id="labelUsername" alignment="BOTTOM_CENTER" layoutX="36.0" layoutY="228.0" prefHeight="36.0" prefWidth="159.0" text="Username" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="405.0" layoutY="636.0" prefHeight="112.0" prefWidth="1405.0" text="- Ready to grow? Set up your garden now and get personalized care reminders!">
+      <Label layoutX="405.0" layoutY="636.0" prefHeight="112.0" prefWidth="1405.0" text="- Track your plants and keep them healthy!">
          <font>
             <Font size="40.0" />
          </font>

@@ -60,6 +60,16 @@ public class Garden {
 
     }
 
+    //It will update the plants based on the weather DC
+    public void updatePlantsByWeather() {
+        double temp = weather.getTemperature();
+
+        for (Plant plant : plants) {
+            plant.updateStatusFromWeather(temp);
+        }
+    }
+
+
     //Method to get the info of the weather (getter) DC
     public Weather getWeatherInfo() {
         return this.weather;

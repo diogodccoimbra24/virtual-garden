@@ -45,6 +45,9 @@ public class GardenApp {
         //Uses the method from Garden DC
         Garden garden = new Garden(name, region);
         user.addGarden(garden);
+
+        this.currentGarden = garden;
+
         return true;
     }
 

@@ -56,12 +56,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="gardenNameLabel" alignment="CENTER" layoutX="329.0" layoutY="45.0" prefHeight="97.0" prefWidth="596.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" text="#garden name" textFill="WHITE">
+      <Label fx:id="gardenNameLabel" alignment="CENTER" layoutX="329.0" layoutY="45.0" prefHeight="97.0" prefWidth="596.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" textFill="WHITE">
          <font>
             <Font size="55.0" />
          </font>
       </Label>
-      <Label fx:id="cityLabel" alignment="CENTER" layoutX="987.0" layoutY="47.0" prefHeight="97.0" prefWidth="648.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" text="#city" textFill="WHITE">
+      <Label fx:id="cityLabel" alignment="CENTER" layoutX="987.0" layoutY="47.0" prefHeight="97.0" prefWidth="648.0" style="-fx-background-color: #3C6E55; -fx-background-radius: 50;" textFill="WHITE">
          <font>
             <Font size="55.0" />
          </font>

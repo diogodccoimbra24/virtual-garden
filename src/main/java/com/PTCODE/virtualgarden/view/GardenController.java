@@ -34,7 +34,6 @@ public class GardenController {
 
         if (gardenNameLabel != null) gardenNameLabel.setText(g.getName());
 
-        // You need Garden.getRegion() for this
         if (cityLabel != null && g.getRegion() != null) {
             cityLabel.setText(g.getRegion().getCity());
         }

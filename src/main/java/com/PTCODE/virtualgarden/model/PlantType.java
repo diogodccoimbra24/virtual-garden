@@ -11,7 +11,7 @@ public enum PlantType {
     //Vegetables DC
     CARROT("Carrot", "Vegetable", 20, 13),
     POTATO("Potato", "Vegetable", 14, 29),
-    TOMATO("Tomato", "Vegetable", 15, 20);
+    TOMATO("Tomato", "Fruit", 15, 20);
 
     //Attributes as final so it's impossible to modify DC
     private final String name;
